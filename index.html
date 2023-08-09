@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a></li>
   </ul>
 </nav>
 
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -166,7 +166,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://example.com/post/CH32%E5%88%9D%E6%8E%A2.html">
+    <link itemprop="mainEntityOfPage" href="https://example.com/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/round.png">
@@ -184,7 +184,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/CH32%E5%88%9D%E6%8E%A2.html" class="post-title-link" itemprop="url">post</a>
+          <a href="/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html" class="post-title-link" itemprop="url">Zigbee课程设计前后端说明文档</a>
         </h2>
 
         <div class="post-meta-container">
@@ -195,7 +195,23 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-01-19 20:19:17" itemprop="dateCreated datePublished" datetime="2023-01-19T20:19:17+08:00">2023-01-19</time>
+      <time title="创建时间：2023-08-09 17:14:11" itemprop="dateCreated datePublished" datetime="2023-08-09T17:14:11+08:00">2023-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-12-28 14:17:27" itemprop="dateModified" datetime="2022-12-28T14:17:27+08:00">2022-12-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%BE%E8%AE%BE/" itemprop="url" rel="index"><span itemprop="name">课设</span></a>
+        </span>
     </span>
 
   
@@ -208,7 +224,132 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="环境说明："><a href="#环境说明：" class="headerlink" title="环境说明："></a>环境说明：</h2><blockquote>
+<p>开发软件环境：IDEA 2022.2.3+Postman+MicroSoft Sqlserver Manager 2015</p>
+</blockquote>
+<blockquote>
+<p>数据库：Sqlserver</p>
+</blockquote>
+<blockquote>
+<p>后端： Springboot+mybatis+maven</p>
+</blockquote>
+<blockquote>
+<p>前端： jQuery ajax+Echart可视化图表库</p>
+</blockquote>
+<h2 id="功能说明："><a href="#功能说明：" class="headerlink" title="功能说明："></a>功能说明：</h2><blockquote>
+<ol>
+<li>接收来自下位机的心率、体温等数据，将其存入Sqlserver数据库中</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>处理来自前端获取数据的请求，将数据以json的形式返回给前端</li>
+</ol>
+</blockquote>
+<h2 id="数据库建表语句："><a href="#数据库建表语句：" class="headerlink" title="数据库建表语句："></a>数据库建表语句：</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">use hello_world</span><br><span class="line">go</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> endDeviceData</span><br><span class="line">(</span><br><span class="line">    id                <span class="type">int</span> <span class="keyword">identity</span></span><br><span class="line">        <span class="keyword">primary</span> key,</span><br><span class="line">    temperature       <span class="type">float</span>    <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">    heartbeat_rate    <span class="type">smallint</span> <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">    oxygen_saturation <span class="type">float</span>    <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">)</span><br><span class="line">go</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://example.com/post/bak-lanqiaobei.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/round.png">
+      <meta itemprop="name" content="Agoni">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Agoni的小站">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Agoni的小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/bak-lanqiaobei.html" class="post-title-link" itemprop="url">蓝桥杯Java赛道备赛规划</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-08-09 17:14:11" itemprop="dateCreated datePublished" datetime="2023-08-09T17:14:11+08:00">2023-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-12-28 14:17:43" itemprop="dateModified" datetime="2022-12-28T14:17:43+08:00">2022-12-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="蓝桥杯Java赛道备赛规划"><a href="#蓝桥杯Java赛道备赛规划" class="headerlink" title="蓝桥杯Java赛道备赛规划"></a>蓝桥杯Java赛道备赛规划</h1><p>不知不觉已经接近大三上学期的尾声了，不得不感慨时光过的好快啊！</p>
+<p>今年的蓝桥杯变数很大，首先，本来已经被我稳稳拿捏的物联网赛道突然更换了开发板，但是学校的实验室资金不足，所以没有办法给我们购买开发板学习，如果自己买的话一个板子就要花400多大洋。再加上蓝桥杯本来就有300块报名费，更不用提实验室的负责老师今年不准备报销个人赛道的报名费了。所以说报名物联网赛道性价比大大降低，单片机和嵌入式赛道虽然也可以一试，但是奈何还是需要自购开发板，所以就打消了报名电子类赛道的念头。</p>
+<p>目光只能放到软件类的赛道，由于C&#x2F;C++赛道较为拥挤，最后在同学的推荐下报名了Java赛道。那么现在就开始刷题吧！干就完事了！</p>
+<p>对于刷题的方法，我找到了网上的一些资源，这里先mark一下：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/bak-lanqiaobei.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -383,215 +524,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/post/offer04.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://example.com/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/round.png">
-      <meta itemprop="name" content="Agoni">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Agoni的小站">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Agoni的小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html" class="post-title-link" itemprop="url">Zigbee课程设计前后端说明文档</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-12-21 21:44:42" itemprop="dateCreated datePublished" datetime="2022-12-21T21:44:42+08:00">2022-12-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-28 14:17:27" itemprop="dateModified" datetime="2022-12-28T14:17:27+08:00">2022-12-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E8%AE%BE/" itemprop="url" rel="index"><span itemprop="name">课设</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="环境说明："><a href="#环境说明：" class="headerlink" title="环境说明："></a>环境说明：</h2><blockquote>
-<p>开发软件环境：IDEA 2022.2.3+Postman+MicroSoft Sqlserver Manager 2015</p>
-</blockquote>
-<blockquote>
-<p>数据库：Sqlserver</p>
-</blockquote>
-<blockquote>
-<p>后端： Springboot+mybatis+maven</p>
-</blockquote>
-<blockquote>
-<p>前端： jQuery ajax+Echart可视化图表库</p>
-</blockquote>
-<h2 id="功能说明："><a href="#功能说明：" class="headerlink" title="功能说明："></a>功能说明：</h2><blockquote>
-<ol>
-<li>接收来自下位机的心率、体温等数据，将其存入Sqlserver数据库中</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li>处理来自前端获取数据的请求，将数据以json的形式返回给前端</li>
-</ol>
-</blockquote>
-<h2 id="数据库建表语句："><a href="#数据库建表语句：" class="headerlink" title="数据库建表语句："></a>数据库建表语句：</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">use hello_world</span><br><span class="line">go</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> endDeviceData</span><br><span class="line">(</span><br><span class="line">    id                <span class="type">int</span> <span class="keyword">identity</span></span><br><span class="line">        <span class="keyword">primary</span> key,</span><br><span class="line">    temperature       <span class="type">float</span>    <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">    heartbeat_rate    <span class="type">smallint</span> <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">    oxygen_saturation <span class="type">float</span>    <span class="keyword">default</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">)</span><br><span class="line">go</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://example.com/post/lanqiaobei.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/round.png">
-      <meta itemprop="name" content="Agoni">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Agoni的小站">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Agoni的小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/lanqiaobei.html" class="post-title-link" itemprop="url">蓝桥杯Java赛道备赛规划</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-12-11 23:53:47" itemprop="dateCreated datePublished" datetime="2022-12-11T23:53:47+08:00">2022-12-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-28 14:17:43" itemprop="dateModified" datetime="2022-12-28T14:17:43+08:00">2022-12-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="蓝桥杯Java赛道备赛规划"><a href="#蓝桥杯Java赛道备赛规划" class="headerlink" title="蓝桥杯Java赛道备赛规划"></a>蓝桥杯Java赛道备赛规划</h1><p>不知不觉已经接近大三上学期的尾声了，不得不感慨时光过的好快啊！</p>
-<p>今年的蓝桥杯变数很大，首先，本来已经被我稳稳拿捏的物联网赛道突然更换了开发板，但是学校的实验室资金不足，所以没有办法给我们购买开发板学习，如果自己买的话一个板子就要花400多大洋。再加上蓝桥杯本来就有300块报名费，更不用提实验室的负责老师今年不准备报销个人赛道的报名费了。所以说报名物联网赛道性价比大大降低，单片机和嵌入式赛道虽然也可以一试，但是奈何还是需要自购开发板，所以就打消了报名电子类赛道的念头。</p>
-<p>目光只能放到软件类的赛道，由于C&#x2F;C++赛道较为拥挤，最后在同学的推荐下报名了Java赛道。那么现在就开始刷题吧！干就完事了！</p>
-<p>对于刷题的方法，我找到了网上的一些资源，这里先mark一下：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/lanqiaobei.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
